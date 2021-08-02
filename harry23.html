@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th,td {
+          border: 2px solid black;
+          padding:5px;
+          
+        }
+        table{
+            border-collapse: collapse;
+            width:50px;
+            margin:50px auto;
+
+        }
+        th{
+            font-size: 30px;
+        }
+        td{
+            font-size: 25px;
+
+        }
+        
+        
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="input" id="data">Name:<input id="data1" type="text"/></div>
+
+        <div class="input" id="data">Age:<input id="data2" type="text" /></div>
+        <!-- <button id="entry">input data</button> -->
+        <input type="button" id="entry" value="Add" onclick="Javascript:addRow()">
+    </div>
+    <table id="display">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <!-- <tr><th>mark</th></tr> -->
+    </table>
+    <script>
+       
+        // var entry=document.getElementById("entry");
+        // entry.addEventListener("click",displayDetails);
+
+        // var row=1;
+        // function displayDetails(){
+        //     var Data=document.getElementById("data1").value;
+        // }
+        // var display = document.getElementById("display");
+        // var newRow = display.insertRow(row);
+        // var cell=newRow.insertCell(0);
+        // cell.innerHTML=data;
+        // row++;
+        function addRow(){
+            var myName = document.getElementById("data1");
+            var myAge=document.getElementById("data2");
+            var table=document.getElementById("display");
+            var rowCount=table.rows.length;
+            var row=table.insertRow(rowCount);
+            row.insertCell(0).innerHTML=myName.value;
+            row.insertCell(1).innerHTML=myAge.value;
+        }
+      
+
+    </script>
+</body>
+</html>

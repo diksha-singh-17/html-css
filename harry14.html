@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox </title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin:0;
+            padding: 0;
+            background-color:  rgb(10, 10, 102);
+        }
+        li,a, button, select{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-weight: 500;
+            color: white;
+            text-decoration: none;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding:8px 25px;
+            margin-top: 20px;
+        }
+        .logo{
+            cursor:pointer;
+
+        }
+        .nav_links{
+            list-style:none;
+        }
+        .nav_links li{
+            display:inline-block;
+            padding: 0px 20px;
+
+        }
+        /* .nav_links li:nth-child(2)
+        {
+         display:inline-block;
+         color:brown ;
+        } */
+        .nav_links li a{
+           transition: all 0.3s ease 0;
+        }
+       
+        .nav_links li a:hover{
+           /* transition: all 0.3s ease 0; */
+           color:rgb(55, 55, 143);
+        }
+        button{
+            background-color:  rgb(81, 81, 179);
+            padding :6px 9px;
+            border:10px;
+            border-radius: 50px;
+            cursor:pointer;
+            transition: all 0.3s ease 0;
+
+        }
+        button:hover{
+            color:rgb(55, 55, 143);
+        }
+        
+        .container{
+            height:100vh;
+            width:100%;
+            /* border: 2px solid black; */
+            display: flex;
+            flex-direction: row;
+            margin:auto;
+            margin-top:77px;
+            background-color: rgb(10, 10, 102);
+            
+        }
+        .box{
+          margin:auto;
+          margin-top:160px;
+          height:300px;
+          width:400px;        
+          margin-left:30px;
+          color:white;
+      }
+      .secondary{
+          display:flex;
+          justify-content: space-between;
+          padding:2 px 3px;
+      }
+      .seconadry a,p{
+        padding-top: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 0px;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="img/aw.svg" alt="logo">
+        <nav>
+            <ul class="nav_links">
+                <select style="border: 0px;color:white">
+                    <option value=""> Products</option>
+                </select> 
+                <select style="border: 0px;color:white" >
+                    <option value=""> Use Cases</option>
+                </select>
+                <li><a href="#">Customers</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About Us</a></li>
+                  
+            </ul>
+            </nav>
+       <div class="secondary">
+        <a href="#">Login</a>
+        <p style="color:white;">|</p>
+            <a class="primary" href="#"><button>Talk to us</button></a>
+        </div>
+            
+    </header>
+    <div class="container">
+        <div class="box">
+            <h1>The Standard for Influencer Marketing</h1><br>
+          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis iusto, nihil sed tempore cum minima repellat maxime in suscipit fuga consequatur quas obcaecati odio voluptates.</p>
+          <div>
+          <button style="padding: 7px;border-radius: 20px; background-color:orangered;margin-top: 40px; color:white">Discover Trackr</button>
+          </div>
+          
+        </div>
+        <div class="box1">
+         <img src="img/socmedia.png" style="margin-top: 180px">
+        </div> 
+     </div> 
+</body>
+</html>

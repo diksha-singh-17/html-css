@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check PhoneNo</title>
+</head>
+<body>
+    <div class="input">
+        Phone No:<input type="number"id="num"/>
+    </div>
+    <label id="hid" style="color:rgb(150, 127, 255);visibility:hidden">invalid</label>
+    <div class="button">
+        <button onclick="validate()" type="button">Submit</button>
+    </div>
+
+    <script>
+        function validate(){
+            var text =document.getElementById("num").value;
+            var expr=/^[6-9]\d{9}$/;
+            
+            if (expr.test(text)){
+                document.getElementById("hid").innerHTML="valid";
+                document.getElementById("hid").style.visibility="visible";
+                document.getElementById("hid").style.color="green";
+
+            }
+            else{
+                document.getElementById("hid").innerHTML="invalid";
+                document.getElementById("hid").style.visibility="visible";
+                document.getElementById("hid").style.color="red";
+ 
+            }
+        }
+    </script>
+</body>
+</html>

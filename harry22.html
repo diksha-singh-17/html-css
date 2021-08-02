@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, td {
+          border: 1px solid black;
+        }
+        </style>
+</head>
+<body>
+   
+   
+ 
+    <h2>ENTER THE DATA</h2>
+ 
+    <input type="number" id="data_id" value="data">
+     
+ 
+     
+    <button onclick="but()">Click Here!</button>
+     
+    <p id="GFG"></p>
+ 
+     
+
+    <table id="myTable">
+      <tr>
+        <td>Row1 cell1</td>
+        <!-- <td>Row1 cell2</td> -->
+      </tr>
+      <tr>
+        <td>Row2 cell1</td>
+        <!-- <td>Row2 cell2</td> -->
+      </tr>
+      <tr>
+        <td>Row3 cell1</td>
+        <!-- <td>Row3 cell2</td> -->
+      </tr>
+    </table>
+    <br>
+    
+    <script>
+        function but() {
+            var data = document.getElementById("data_id").value;
+            document.getElementById("GFG").innerHTML = data;
+        }
+    // function myCreateFunction() {
+    //   var table = document.getElementById("data_id");
+    //   var row = table.insertRow(0);
+    //   var cell1 = row.insertCell(0);
+    //   row.textContent=
+    // //   var cell2 = row.insertCell(1);
+    //   cell1.innerHTML = "NEW CELL1";
+    // //   cell2.innerHTML = "NEW CELL2";
+   
+    }
+  </script>   
+</body>
+</html>

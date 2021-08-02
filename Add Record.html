@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Record</title>
+    <style>
+        .input{
+            padding:10px;
+        }
+        table, th,td {
+          border: 2px solid black;
+          padding:5px;
+          
+        }
+        table{
+            border-collapse: collapse;
+            width:50px;
+            margin:50px auto;
+
+        }
+        th{
+            font-size: 30px;
+        }
+        td{
+            font-size: 25px;
+
+        }
+       .btn #entry{
+            display:flex;
+            /* justify-content:center;
+            align-items:center; */
+            margin:50px auto;
+            /* margin-right: auto;
+            margin-left: auto; */
+        }
+         </style>
+</head>
+<body>
+   
+    <div class="input">Age:<input id="data1" type="number"/></div>
+    <div class="input">Blood Group:<input id="data2" type ="text"/></div>
+    <div class="btn">
+    
+<input type="button" id="entry" value="Add" onclick="Javascript:Addrecord();"/>
+
+    </div>
+    
+    <table id="display">
+      
+    </table>
+    <script>
+        function Addrecord(){
+            var myName = document.getElementById("data1").value;
+            var mybloodgroup=document.getElementById("data2").value;
+            var row = document.createElement('tr');
+            var Nametd = document.createElement('td');
+            var Agetd = document.createElement('td');
+            Nametd.innerText=myName;
+            Agetd.innerText=mybloodgroup;
+            row.appendChild(Nametd);
+            row.appendChild(Agetd);
+            document.getElementById('display').appendChild(row);
+            document.getElementById('data1').value='';
+            document.getElementById('data2').value='';
+            
+        }
+        
+    </script>
+    </body>

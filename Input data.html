@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display data in tabular form</title>
+    <style>
+        .input{
+            padding:10px;
+        }
+        table, th,td {
+          border: 2px solid black;
+          padding:5px;
+          
+        }
+        table{
+            border-collapse: collapse;
+            width:auto;
+            margin:50px auto;
+
+        }
+        th{
+            font-size: 30px;
+        }
+        td{
+            font-size: 25px;
+
+        }
+       .btn #entry{
+            display:flex;
+          
+        }
+         </style>
+</head>
+<body>
+    <div class="input">Age:<input id="data1" type="number"/></div>
+    <div class="input">Bloodgroup:<input id="data2" type ="text"/></div>
+    <div class="input">Name:<input id="data3" type="text"/></div>
+    <div class="input">City:<input id="data4" type="text"/></div>
+
+<input type="button" id="entry" value="Add" onclick="Javascript:Addrecord();"/>
+    
+    <table id="display">
+      
+    </table>
+    <script>
+               
+
+        function Addrecord(){
+           
+            var myage = document.getElementById("data1").value;
+            var mybloodgroup=document.getElementById("data2").value;
+            var myname = document.getElementById("data3").value;
+            var mycity = document.getElementById("data4").value; 
+            //creating table row          
+            var row = document.createElement('tr');
+            var agetd = document.createElement('td');        
+            var bloodgrouptd = document.createElement('td');
+            var nametd = document.createElement('td');          
+            var citytd = document.createElement('td');
+            var deltd=document.createElement('td');
+            agetd.innerText=myage;
+            bloodgrouptd.innerText=mybloodgroup;
+            nametd.innerText=myname;
+            citytd.innerText=mycity;
+            deltd.innerHTML='<button onclick=deleteRow(this)>Delete Data</button>';
+            row.appendChild(agetd);
+            row.appendChild(bloodgrouptd);
+            row.appendChild(nametd);
+            row.appendChild(citytd)
+            row.appendChild(deltd);
+            document.getElementById('display').appendChild(row);
+            document.getElementById('data1').value='';
+            document.getElementById('data2').value='';
+            document.getElementById('data3').value='';
+            document.getElementById('data4').value='';
+        }
+        function deleteRow(row)
+         {
+           var i=row.parentNode.parentNode.rowIndex;
+           document.getElementById('display').deleteRow(i);
+         }
+    
+    // function deleteRow(row) {
+    //             table = document.getElementById("display");
+    //          row = document.getElementById(row);
+             
+    //             table.removeChild(row);
+    //         } 
+       
+    </script>
+</body>
+</html>

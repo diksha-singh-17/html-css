@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student's form</title>
+    <style>
+        
+        .input{
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+    <form >
+        <h1>Student's Record</h1>
+        <div class="input">Name:<input id="data1" type="text" placeholder="studentname"/></div>
+        <div class="input">Age:<input id="data2" type="number" placeholder="age"/></div>
+        <div class="input">Date:<input id="data3" type="date" placeholder="dateof birth"/></div>
+        <div class="input">Password:<input id="data4" type="password" placeholder="password"/></div>
+        <div class="input">Email:<input id="data5" type="emailid" placeholder="enter your email"/></div>
+        <div class="input" >
+        Gender: Male <input type="radio"id="data6" name="my gender">Female<input type="radio" name="my gender"/>
+    </div>
+    
+        <div>
+            <input type="Reset"value="Reset now"></input>
+            <input type="button" id="entry" value="submit" onclick="Javascript:addArray();"/>
+          
+        </div>
+        <div class="result"></div>
+    </form>
+        <script>
+            // var myname=document.getElementById('data1');
+            // var myage=document.getElementById('data2');
+            // var mydate=document.getElementById('data3');
+            // var mypassword=document.getElementById('data4');
+            // var myemail=document.getElementById('data5');
+            // var mygender=document.getElementById('data6');
+            // var myeligibility=document.getElementById('data7');
+            // var add=document.getElementById("entry");
+            // // var addArray=[];
+            // // addArray.push(add.value);
+            // // var x = 0;
+            // 
+
+const disp=[];
+function addArray()
+{
+    var myName = document.getElementById("data1");
+    var myAge=document.getElementById("data2");
+    var mydate= document.getElementById("data3");
+    var mypassword=document.getElementById("data4");
+    var myemail= document.getElementById("data5");
+    var mygender=document.getElementById("data6");
+    
+    disp[0]=myName.value;
+    disp[1]=myAge.value;
+    disp[2]=mydate.value;
+    disp[3]=mypassword.value;
+    disp[4]=myemail.value;
+    disp[5]=mygender.value;
+
+    console.log(disp);
+}
+
+
+        </script>
+    
+</body>
+</html>

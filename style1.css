@@ -1,0 +1,53 @@
+*{
+    margin:0;
+    padding:0;
+}
+:root{
+    --navbar-height:59px;
+}
+#navbar{
+    display:flex;
+    align-items: center;
+}
+#logo{
+margin:34px 45px;
+}
+#logo img{
+height:56px;
+margin: 3px 6px;
+}
+#navbar{
+    position: relative;
+}
+ #navbar ul{
+
+    display:flex;
+
+}
+#navbar ::before{
+content:"";
+background-color: black;
+position: absolute;
+height:70%;
+width:100%;
+z-index: -1;
+/*opacity:0.8;*/
+    
+
+}
+#navbar ul li{
+
+list-style:none;
+font-size: 1em;   
+}
+#navbar ul li a{
+color: white;
+    display:block;
+    padding:3px 22px;
+     border-radius: 20px;
+    text-decoration:none;  
+    }
+    #navbar ul li a:hover{
+        color: black;
+            background-color: white;
+            }

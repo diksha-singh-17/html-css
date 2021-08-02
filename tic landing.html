@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="10; url=http://127.0.0.1:5500/tic_tac_toe_final.html"/>
+    <title>Document</title>
+    <style>
+        *{
+            background-color: black;
+        }
+         
+        .container{
+           /* background-color: black; */
+
+        }
+        .box{
+            display:flex;
+            /* background-color: green; */
+            width:150px;
+            height:150px;
+            position: relative;
+            animation-name: dixa1;
+            animation-duration: 8s;
+            animation-iteration-count: 5;
+        }
+        @keyframes dixa1{
+            0%{
+                top:0px;
+                left:0px;
+            }
+            25%{
+                top:150px;
+                left:0px;
+            }
+           75%{
+               top:150px;
+               left:250px;
+           }
+           100%{
+               top:0px;
+               left:250px;
+           }
+
+        }
+       
+        header{
+            display:flex;
+            flex-direction:column;
+        }
+        section{
+        display: flex;
+        flex-direction: column;
+         /* margin:3px 23px; */
+         align-items: center;
+         border:2px solid blueviolet;
+         justify-content: center;
+         margin-left: 500px;
+         margin-right: 500px;
+         margin-top: 150px;
+
+        }
+        section:hover{
+            border-radius: 20px;
+        }
+      
+        h1{
+            /* font-weight: 600; */
+            color:purple;
+            /* text-shadow:1px 0px white; */
+        }
+        h1:hover{
+            text-shadow:0px 1px white;
+            cursor:pointer;
+            font-family: cursive;
+        }
+        p{
+            font-weight: 600;
+            font-family: Arial, Helvetica, sans-serif;
+            color:white;
+        }
+        p:hover{
+            text-shadow: 2px 2px rgba(108, 108, 112, 0.699);
+            cursor:pointer;
+            font-family: cursive;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <marquee><h4>hiii</h4></marquee> -->
+        <div class="box">
+            <img src="img/tac.png">
+        </div>
+       
+    </div>
+    <section>
+        <h1>Welcome to the Tic Tac Toe Game</h1>
+        <p>Your game will be ready in a few sec...</p>
+    </section>
+</body>
+</html>
